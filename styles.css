@@ -42,7 +42,7 @@ body, html {
 .calendar-header {
     text-align: center;
     margin-bottom: 20px; 
-    font-size: 18px;
+    font-size: 1.2em; /* 반응형 크기 조정 */
     font-weight: bold;
     color: #292929;
 }
@@ -50,7 +50,7 @@ body, html {
 .calendar-body {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .day-names {
@@ -58,7 +58,7 @@ body, html {
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1em; /* 반응형 크기 조정 */
     color: #292929;
 }
 
@@ -70,11 +70,11 @@ body, html {
 
 .days div {
     text-align: center;
-    font-size: 14px; 
+    font-size: 1em; /* 반응형 크기 조정 */
     color: #292929; 
-    line-height: 32px; 
-    height: 32px; 
-    width: 32px; 
+    line-height: 1.5em; 
+    height: 1.5em; 
+    width: 1.5em; 
     margin: 0 auto; 
 }
 
@@ -91,8 +91,29 @@ body, html {
     border-radius: 50%;
     color: #292929; 
     font-weight: bold;
-    line-height: 32px; 
-    height: 32px; 
-    width: 32px; 
+    line-height: 1.5em; 
+    height: 1.5em; 
+    width: 1.5em; 
     display: inline-block;
+}
+
+/* 반응형: 작은 화면일 때 크기 조정 */
+@media (max-width: 320px) {
+    .calendar-container {
+        padding: 10px;
+        max-width: 300px;
+    }
+    .calendar-header {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    .day-names {
+        font-size: 0.8em;
+    }
+    .days div {
+        font-size: 0.8em;
+        line-height: 1.2em;
+        height: 1.2em;
+        width: 1.2em;
+    }
 }
